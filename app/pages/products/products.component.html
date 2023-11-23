@@ -1,0 +1,9 @@
+<section class="products">
+    <!-- en este caso lo que se llama al evento (addToCardClick definido en el hijo del componente y luego se llama a una función padre)-->
+    <!-- aqui se utilizo una directiva *ngFor para la replicación de los productos-->
+    <app-product 
+    (addToCartClick)="addToCart($event)"
+    [product] = "product" 
+    *ngFor="let product of products">
+    </app-product>
+</section>
